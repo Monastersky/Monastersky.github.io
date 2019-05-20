@@ -55,7 +55,9 @@
           <a class="nav-link js-scroll-trigger" href="#reddit_project">Reddit NLP Project</a>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#econ_impact">Economic Impact of Natural Disasters</a>
-        <li class="nav-item">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#credit_card">Credit Card Fraud Detection</a>
+          <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
         </li>
       </ul>
@@ -189,26 +191,30 @@
     <hr class="m-0">
 
 
-    <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="housing_project">
+  <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="housing_project">
       <div class="w-100">
         <h2 class="mb-5">Housing Project</h2>
-
+  
         <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
           <div class="resume-content">
             <h3 class="mb-0"></h3>
             <div class="subheading mb-3"></div>
             <p>Using housing data from Ames, Iowa I was able to create a model that predicted housing prices when given features of a house. I had to spend hours cleaning the data and account for positive outliers in the dataset.Overall my model had an R-squared score of .9310 which means my model accurately predicted ~93 percent of the changes in housing price. This is remarkably accurate when you think about all the neighborhood and housing features that impact how much a house will sell for. In the future I would hope to see if I could expand upon this model to predict housing prices in other cities.
 
-            To learn more about this project please see the github link below for my presentation, executive summary and code.</p>
+              To learn more about this project please see the github link below for my presentation, executive summary and code.</
+  
+            </p>
+           </div>
           </div>
-      </div>
-      <div class="social-icons">
-        <a href="https://github.com/Monastersky/Aimes-Project">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
-
+          <div class="social-icons">
+  
+            <a href="https://github.com/Monastersky/Aimes-Project">
+              <i class="fab fa-github"></i>
+            </a>
+          </div> 
+      <div>
     <hr class="m-0">
+  </section>
 
     <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="reddit_project">
       <div class="w-100">
@@ -231,18 +237,19 @@
             <i class="fab fa-github"></i>
           </a>
         </div>
-
+      <div>
         <hr class="m-0">
+    </section>
 
-        <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="econ_impact">
-          <div class="w-100">
-            <h2 class="mb-5">Measuring the Economic Impact of Natural Disasters</h2>
+      <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="econ_impact">
+        <div class="w-100">
+          <h2 class="mb-5">Measuring the Economic Impact of Natural Disasters</h2>
 
-            <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-              <div class="resume-content">
-                <h3 class="mb-0"></h3>
-                <div class="subheading mb-3"></div>
-                <p>I was tasked with finding if there is any sort of negative relationship with instances of natural disasters and how successful a cities economy does. For this project my team and I decided to study the affect Hurricane Sandy had on local wages and unemployment statistics in 10 different cities along the east coast shore. We collected a number of different weather statistics to measure how severly the storm hit the city and found monthly unemployment statistics for wage and unemployment for each city.
+          <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="resume-content">
+              <h3 class="mb-0"></h3>
+              <div class="subheading mb-3"></div>
+              <p>I was tasked with finding if there is any sort of negative relationship with instances of natural disasters and how successful a cities economy does. For this project my team and I decided to study the affect Hurricane Sandy had on local wages and unemployment statistics in 10 different cities along the east coast shore. We collected a number of different weather statistics to measure how severly the storm hit the city and found monthly unemployment statistics for wage and unemployment for each city.
 
                 I wanted to use a time series model to model the data because I had historical data. Because natural disasters occur suddenly, I was trying to assess the sudden fluctuations in the economic data that may have occurred in the months following Hurricane Sandy, which occurred in October 2012. That means that, in the context of ARIMA modeling, I was interested in extracting the moving average component of this data (which handles sudden fluctuations), and ignoring the auto-regressive component of this data (which handles long-term trends). Because I had obvious seasonality in this data, I took one order of seasonal differencing (12 months) before fitting the models.
 
@@ -250,19 +257,43 @@
 
 
                 To learn more about this project please see the github link below for my presentation, executive summary and code as well as the medium link for an article I wrote on this project.
-                </p>
-              </div>
+              </p>
+            </div>
+          </div>
+          <div class="social-icons">
+            <a href="https://medium.com/@noah.monastersky/economic-impact-of-hurricane-sandy-a783b4bf4572">
+              <i class="fab fa-medium"></i>
+
+            <a href="https://github.com/Monastersky/Natural-Disaster-Project">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        <div>
+        <hr class="m-0">
+      </section>
+
+
+      <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="credit_card">
+        <div class="w-100">
+          <h2 class="mb-5">Measuring the Economic Impact of Natural Disasters</h2>
+    
+          <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="resume-content">
+              <h3 class="mb-0"></h3>
+              <div class="subheading mb-3"></div>
+              <p>I was interested to see if I could create a credit card fraud detection model to detect instances of fraud. I was able to find a dataset that had around 285,000 fraud purchase points that had fraud and non-fraud charges. Each charge had the amount of the purchase as well as historic information on the card holders’ patterns. I knew for this model I wanted to minimize instances where the charge was fraudulent, but I predicted it was not fraud, so I optimized my model based on the recall score. I tried multiple different models and it turned that the random forest model scored the best with a perfect recall score of 1.0 and an accuracy score of over 99 percent. I also created a Bayesian logistic regression model which was helpful because it could allow me to see the distribution for each of my coefficients. If you would like to learn more about my project, please see my GitHub link below.
+              </p>
+             </div>
             </div>
             <div class="social-icons">
-              <a href="https://medium.com/@noah.monastersky/economic-impact-of-hurricane-sandy-a783b4bf4572">
-                <i class="fab fa-medium"></i>
-
-              <a href="https://github.com/Monastersky/Natural-Disaster-Project">
+    
+              <a href="https://github.com/Monastersky/fraud-detection">
                 <i class="fab fa-github"></i>
               </a>
-            </div>
-
-          <hr class="m-0">
+            </div> 
+        <div>
+      <hr class="m-0">
+    </section>
 
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="interests">
       <div class="w-100">
@@ -273,7 +304,7 @@
     </section>
 
     <hr class="m-0">
-
+    </section>
 
 </body>
 
